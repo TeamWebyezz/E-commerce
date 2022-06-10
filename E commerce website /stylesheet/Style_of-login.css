@@ -1,0 +1,153 @@
+.hero_section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-section {
+  margin-top: 6vw;
+  width: 75%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 1px 2px 30px 10px #3c3d3c;
+          box-shadow: 1px 2px 30px 10px #3c3d3c;
+  margin-left: 13vw;
+}
+
+.left {
+  width: 50%;
+  background: url(/assets/Loginpage/shoppers_yellow.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.left:hover + .hero_section {
+  background: -webkit-gradient(linear, left bottom, right top, from(#62C5E4), color-stop(#77e5ef), color-stop(white), to(#009EC3));
+  background: linear-gradient(to top right, #62C5E4, #77e5ef, white, #009EC3);
+}
+
+.left img {
+  width: 100%;
+  height: 100%;
+}
+
+.right {
+  padding-left: 3vw;
+  padding-top: 2vw;
+  width: 50%;
+}
+
+.right h1 {
+  border-bottom: 2px solid #FD0002;
+  display: inline-block;
+}
+
+.rember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-right: 9vw;
+}
+
+.input {
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.username {
+  margin: 2rem 0;
+}
+
+.password {
+  margin-bottom: 0.8rem;
+}
+
+.username,
+.password {
+  /* border: 2px solid black; */
+  border-radius: 27px;
+  /* margin: 2rem 0; */
+  width: 23vw;
+  text-align: left;
+  padding-left: 12px;
+  height: 6vh;
+  line-height: 6vh;
+  background: #b6afaf57;
+}
+
+.btn {
+  margin: 2vw 3.5rem;
+  padding: 3px;
+  border: none;
+  border-radius: 30px;
+  width: 14rem;
+  height: 2rem;
+  cursor: pointer;
+  background: -webkit-gradient(linear, left top, right top, from(yellow), to(orange));
+  background: linear-gradient(to right, yellow, orange);
+  color: #0c1bf6;
+}
+
+.btn:hover {
+  opacity: 80%;
+  color: black;
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.social {
+  text-align: center;
+  margin-top: 1.5vw;
+  margin-right: 10vw;
+}
+
+.social-icons {
+  width: 100%;
+}
+
+.social-icons i {
+  margin: 1vw 0.5vw;
+  background-color: #FDA600;
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  text-align: center;
+  line-height: 2rem;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.social-icons i:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: white;
+}
+/*# sourceMappingURL=Style_of-login.css.map */
