@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "Central Display DEMO" ;
+    src: url(/fonts/CentralDisplayDemoExpanded-w1ql3.woff) format("woff");
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  GLOBAL VARIABLES
+
+.list-style-none{
+    list-style: none;
+}
+.text-deco{
+    text-decoration: none;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.align-item-center{
+    align-items: center;
+}
+// @@@@@@@@@@@@@@@@@@@@@@@@ FUNCTIONS
+@mixin center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    letter-spacing: 1px;
+}
+body{
+    overflow-x: hidden ;
+    font-family: Poppins;
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@  THE MAIN HERO SECTION
+.hero__section{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+            //  THE NAVIGATION 
+.blur__nav{
+    width: 100%;
+    height: 8vh;
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+.hero__section .navigation{
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    // background-color: red;
+    place-items: center;
+    text-align: center;
+    
+    font-size: 1.2rem;
+    z-index: 3;
+    font-family: "Bagola";
+
+}
+.hero__section .navigation .main__nav{
+    // background-color: black;
+    width: 80%;
+
+}
+.nav__item{
+    margin: 0 1.5rem;
+    mix-blend-mode: difference;
+}
+.nav__item .nav__link{
+    color: #ffffff;
+    font-family: "KARA";
+    transition: all 0.4s ease-outs;
+    // mix-blend-mode: difference;
+}
+.nav__item .nav__link:hover{
+    color: black;
+
+}
+.product__icon{
+    width: 23vh;
+    // background-color: black;
+    
+}
+.product__icon__logo{
+    margin-right: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+}
+
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+}
+.content .item{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-out;
+}
+
+.content .item:hover{
+width: 250%;
+}
+.content .item img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    @include center;
+    border: none;
+}
+// .content .item .little-center{
+//     transform: translate(-30%,-50%);
+// }
+.text{
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    // background: linear-gradient(to bottom, transparet, rgb(0 0 0/ 40%));
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 3;
+
+}
+.content .item .text .text-inner{
+    // position: absolute;
+    // bottom: 2rem;
+    // left: 0;
+    z-index: 3;
+}
+.written{
+    width: 100%;
+    height: 100vh;
+
+}
