@@ -1,0 +1,843 @@
+@font-face {
+    font-family: "Central Display DEMO" ;
+    src: url(/fonts/CentralDisplayDemoExpanded-w1ql3.woff) format("woff");
+}
+@font-face {
+    font-family: "Romance" ;
+    src: url(/fonts/RomanceLogicDemo-Wy8BE.woff) format("woff");
+}
+
+@font-face {
+    font-family: "Selga";
+    src: url(/fonts/SelgaDemo-9Y3R7.woff)format("woff");
+}
+@font-face {
+    font-family: "Mak" ;
+    src: url(/fonts/MAK-bold.woff) format("woff");
+}
+@font-face {
+    font-family: "Bagola";
+    src: url(/fonts/Bagola-nR5zR.woff) format("woff");
+}
+html,body{
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+    // background-color: red;
+    width: 5px;
+}
+
+// @@@@@@@@@@@@@@@@@@@@@@@@@@  GLOBAL VARIABLES
+.relative{
+    position: relative;
+}
+.position-center{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.pointer{
+    cursor: pointer;
+}
+.list-style-none{
+    list-style: none;
+}
+.text-deco{
+    text-decoration: none;
+}
+.flex{
+    display: flex;
+}
+.flex-column{
+    flex-direction: column;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.align-item-center{
+    align-items: center;
+}
+// @@@@@@@@@@@@@@@@@@@@@@@@ FUNCTIONS
+@mixin position-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+@mixin flex-all-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    letter-spacing: 1px;
+}
+body{
+    overflow-x: hidden ;
+    font-family: Poppins;
+}
+
+
+// @@@@@@@@@@@@@@@@@@@@@@  PRE LOADER
+
+
+// @@@@@@@@@@@@@@@@@@@@@@  THE MAIN HERO SECTION
+.hero__section{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #3E464E;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    z-index: 3;
+}
+            //  THE NAVIGATION 
+.blur__nav{
+    width: 100%;
+    height: 8vh;
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(6px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.329) 0px 25px 20px -20px;
+}
+.hero__section .navigation{
+    width: 90%;
+    margin-left: 5%;
+    height: 100%;
+    // background-color: red;
+    place-items: center;
+    text-align: center;
+    
+    font-size: 1.2rem;
+    z-index: 20;
+    font-family: "Bagola";
+
+}
+.hero__section .navigation .main__nav{
+    // background-color: black;
+    width: 80%;
+
+}
+.nav__item{
+    margin: 0 1.5rem;
+    mix-blend-mode: difference;
+}
+.nav__item .nav__link{
+    color: #ffffff;
+    font-family: "KARA";
+    transition: all 0.4s ease-out;
+    border:none ;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+.nav__item a:hover {
+    color: black;
+    transform: scale(1.2);
+    
+
+
+}
+.product__icon{
+    width: 25vh;
+    // background-color: black;
+    display: flex;
+    transition: all 0.3s ease;
+    
+}
+.three__icon{
+
+    transition: all 0.3s ease-in-out;
+}
+
+.product__icon__logo{
+    margin-right: 25px;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+    // background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    padding: 4px;
+    transition: all 0.3s ease;
+}
+.product__icon__logo:hover{
+    color: white;
+    background-color: black;
+}
+
+.content{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+}
+.content .item{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-out;
+}
+
+.content .item:hover{
+width: 250%;
+}
+.content .item img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    @include center;
+    border: none;
+}
+// .content .item .little-center{
+//     transform: translate(-30%,-50%);
+// }
+.text{
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 100%;
+    height: 100%;
+    color: black;
+    // background: linear-gradient(to bottom, transparet, rgb(0 0 0/ 40%));
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 3;
+
+}
+.content .item .text .text-inner{
+    // position: absolute;
+    // bottom: 2rem;
+    // left: 0;
+    z-index: 3;
+}
+// @@@@@@@@@@@@@@@@@  SPONSOPR PARTNER
+
+.sponsor__partners{
+    width: 100%;
+    height: 20vh;
+    background-color: #a77b5ad8;
+    // background-image: url(/assets/sponsorimage/2fd920145535283.62a02392163d6.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: "Romance";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(44, 44, 91, 0.296) 5px 30px 60px -12px inset, 
+                rgba(20, 15, 15, 0.29) 5px 18px 36px -18px inset;
+}
+.partners{
+    display: flex;
+    width: 60%;
+    height: 80%;
+    // background-color: black;
+
+}
+.partner{
+    width: 25%;
+    height: 100%;
+    // color: white;
+    text-align: center;
+    // border: 1px solid red;
+    @include flex-all-center();
+    font-weight: bolder;
+}
+.partner__name{
+    font-size: 2rem;
+    font-weight: bolder;
+    color: rgb(211, 211, 211);
+    transition: all 0.3s ease-out;
+    text-transform: uppercase;
+}
+.partner__name:hover{
+    color: rgb(255, 255, 255);
+    cursor: default;
+}
+
+
+
+//  @@@@@@@@@@@@@@  KING KYLIE
+
+.written{
+    width: 100%;
+    height: 200vh;
+    background-color: #F0F1F4;
+    // overflow: hidden;
+    
+}
+
+.upper__part__of__kylie{
+    overflow: hidden;
+    width: 100%;
+    height: 80%;
+    color: black;
+    text-transform: uppercase;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    // position: relative
+}
+.content__of__kylie__part{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.cta{
+    margin-top: 5rem;
+    width: 70%;
+    height: 70%;
+    font-size: 3rem;
+    // text-align: center;
+}
+.cta__items{
+    position: relative;
+    background-color: black;
+    padding: 0 4vw;
+}
+.cta__item__link{
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.4s;
+    color: black;
+    text-decoration: none;
+}
+.cta__item__link::before{
+    all: initial;
+    position: absolute;
+    bottom: 60%;
+    left: 0;
+    pointer-events: none;
+}
+.cta__item__link:hover{
+    transition-duration: 0.2s ;
+    opacity: 0;
+}
+.cta__item__img{
+    z-index: 2;
+    pointer-events: none;
+    position: absolute;
+    height: 12vh;
+    max-height: 600px;
+    opacity: 0;
+    left: 8%;
+    top: 10%;
+    transform: scale(0);
+
+}
+
+
+.big__img{
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    // position: absolute;
+    background-image: url(/assets/kylie_janner_images/Kylie-Jenner-Wallpaper-Aug-2021-26.jpeg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.6s ease-in-out;
+}
+
+.big__img:hover{
+    background-image: url(/assets/kylie_janner_images/imga-namekylie.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.written .kylie__product__cards{
+    width: 100%;
+    height: 20%;
+    background-color: #f3cdd0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // outline: none;
+    // border: none;
+    // flex-wrap: nowrap;
+    // position: relative;
+}
+
+.product__card{
+    // position: absolute;
+    border-radius: 1rem;
+    width: 20%;
+    height: 90%;
+    background-color: #F0F1F4;
+    margin: 0 1rem;
+    transition: all 600ms cubic-bezier(0.33, 0.11, 0.02, 0.99), transform 600ms cubic-bezier(0.33, 0.11, 0.02, 0.99);
+    box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffff;
+}
+
+.product__card:hover{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1),
+                0 1px 6px rgba(0, 0, 0, 0.05), 
+                0 8px 8px rgba(0, 0, 0, 0.1), 
+                0 16px 16px rgba(0, 0, 0, 0.1), 
+                8px 32px 32px rgba(0, 0, 0, 0.15), 
+                8px 64px 64px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05) translateY(-0.5rem);
+}
+
+.pc__border{
+    transition: all 0.5s ease-out;
+    width: 96%;
+    height: 96%;
+    border-radius: 1px solid #e9e9e9;
+    border-radius: 1rem;
+    margin-top: 2%;
+    margin-left: 2%;
+    position: relative;
+
+
+}
+.short__pc__img{
+    position: absolute;
+    width: 100%;
+    height: 98%;
+    object-fit: cover;
+    border-radius: 1rem  ;
+
+}
+// .short__pc__img:hover{
+//     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+// }
+
+.the__littlecenter{
+    object-position: top 30% left 50% ;
+}
+
+h1{
+    font-family: "Selga";
+}
+
+
+
+
+// @@@@@@@@@@@@@@@@@@@  VIDEO SECTION 
+.video__section{
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+    position: relative
+
+}
+.video__section .main__vid{
+    position: relative;
+    // @include position-center()
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    mix-blend-mode: darken;
+}
+.background__filter{
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgb(187,187,187);
+    background: radial-gradient(circle, rgba(187, 187, 187, 0.077) 0%, rgba(46, 46, 46, 0.167) 20%, rgba(0, 0, 0, 0.57) 100%);
+}
+.quotes{
+    width: 98%;
+    height: 96%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-family: "Bagola";
+    z-index: 4;
+    top: 2%;
+    left: 1%;
+
+    text-align: center;
+    // background: rgba(0, 0, 0, 0.064);
+    border: 1px solid white;
+}
+.video__quote{
+    position: absolute;
+    @include position-center();
+    font-size: 2rem;
+    line-height: 3.4rem;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+//  @@@@@@@@@@@@@ Marquee effect of the next video part
+
+.marquee__effect__next__vid{
+    overflow: hidden;
+    background-color: #171715;
+    cursor: default;
+    white-space: nowrap;
+    padding: 10vh 0;
+    box-shadow: inset 20px 0 22px hsla(0, 0%, 16%, 0.53), 
+              inset -4px 12px 22px hsl(0, 0%, 20%);
+
+}
+.effect__of__marquee{
+    font-family: "Canopee";
+    font-size: 12vh;
+    position: relative;
+    color: #b2afaa;
+    display: inline-block;
+    margin: 0 15%;
+    padding: 0 15%;
+    text-transform: uppercase;
+    will-change: transform;
+}
+//  @@@@@@@@@@@@@@@@  THE K POP AREA
+
+.the__k__pop__area{
+    width: 100%;
+    height: 180vh;
+    overflow: hidden;
+    transition: all 0.6s ease-out;
+    // background-color: #ECF0F3;
+    z-index: -3;
+    
+}
+
+.three__pic__collage{
+    width: 86%;
+    height: 70vh;
+    margin-left: 7%;
+    margin-top: 20vh ;
+    display: flex;
+    flex-wrap: nowrap;
+    // border-bottom: 1px solid black;
+}
+.contents__of__left{
+    width: 25%;
+    height: 100%;
+    
+    color: rgb(255, 255, 255);
+    font-family: "Romance";
+    font-size: 1.2rem;
+    font-weight: bolder;
+    position: relative;
+    z-index: 2;
+
+}
+.contents__of__left .writting__of__heading{
+    margin-bottom: 1.2rem;
+
+    position: absolute;
+    top: 14%;
+    left: 14%;
+}
+.contents__of__left p{
+    width: 110%;
+    position: absolute;
+    top: 28%;
+    left: 14%
+}
+.main__three__images{
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+.main__three__images .middle__of__kpop{
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.main__three__images .circle__of__round{
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    border: 1px solid black;
+    border-radius: 50%;
+    top: -60vh;
+    left: -70vh;
+    z-index: -1;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    ;
+    filter: blur(10px);
+}
+.main__three__images .bottom__left{
+    position: absolute;
+    width: 45%;
+    height: 50%;
+    object-fit: cover;
+    z-index: 2;
+    bottom: -10%;
+    left: -25%;
+    object-position: top;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.main__three__images .top__right{
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    object-fit: cover;
+    z-index: 2;
+    top: -15%;
+    right: -22%;
+    object-position: top;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+}
+.little__info__right{
+    width: 25%;
+    height: 100%;
+    text-align: start;
+    position: relative;
+    // mix-blend-mode: difference;
+    z-index: 3;
+
+}
+.little__info__right p{
+    position: absolute;
+    bottom: 5rem;
+    left: -4rem;
+    width: 110%;
+    text-align: end;
+    font-family: "Romance";
+    font-size: 1.2rem;
+    font-weight: bolder;
+
+}
+
+.the__bottom__section__of__kpop{
+    height: 110vh;
+    // background-color: #ECF0F3;
+    width: 100%;
+    @include flex-all-center();
+
+    .centering__the__items{
+        width: 80%;
+        height: 78vh;
+        box-shadow: 13px 13px 20px #cbced1,
+            -13px -13px 20px #ffffff;
+        border-radius: 1rem;
+
+        z-index: inherit;
+        @include flex-all-center();
+        .again__centering__the__items{
+            // background-color: white;
+            width: 98%;
+            height: 98%;
+            display: flex;
+            // align-items: center;
+            justify-content: center;
+            .details__of__kpop{
+                height: 88%;
+                width: 32%;
+                background-color: #ffffff;
+                border-radius: 2rem;
+                color: black;
+                box-shadow: 5px 5px 8px #00000020,
+                -5px -5px 8px #ffff;
+                transition: all .1s ease-out;
+            &:hover{
+                box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),
+            inset -5px -5px 8px #fff;
+        background: #fff;
+            }
+            }
+            .first__half__div{
+                // background: red;
+                width: 68%;
+                height: 88%;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                transition: all 0.6s ease-out;
+                align-items: center;
+                justify-content: center;
+                .upper__right__div{
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 1rem;
+                    width: 98%;
+                    height: 48%;
+                    transition: all 0.6s ease-out;
+                    background-position: center;
+                    filter: blur(1px);
+                    & img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover{
+                        height: 90%;
+                        filter: blur(0);
+                    }
+
+                }
+                .lower__right__div{
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 1rem;
+                    width: 98%;
+                    height: 48%;
+                    transition: all 0.6s ease-out;
+                    background-position: center;
+                    filter: blur(1px);
+                    & img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover{
+                        height: 90%;
+                        filter: blur(0);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+// @@@@@@@@@@@@@@@@@@@  YOUR STAR SECTION
+
+.your__star__section{
+    width: 100%;
+    height: 150vh;
+    background-color: #a84d4d;
+}
+
+
+
+
+// @@@@@@@@@@@@@@@@ FOOTER
+.footer{
+    width: 100%;
+    height: 46vh;
+    // color: white;
+    font-family: "KENOKY";
+    font-size: 1rem;
+    background-color: #cbcbcb;
+
+}
+.footer__section{
+    width: 98%;
+    height: 92%;
+    // margin-left: 5%;
+    border-radius: 1.1rem;
+    mix-blend-mode: darken;
+    background-image:url(/assets/video/footer.gif) ;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+}
+.footer__details{
+    width: 90%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer__items{
+    width: 100%;
+    height: 90%;
+    color: rgb(164, 164, 164);
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease-out;
+
+}
+.footer__item h2:hover{
+    color: white;
+}
+.footer__item ul li:hover{
+    color: white;
+    mix-blend-mode: difference;
+}
+.footer__copy{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    color: rgb(164, 164, 164);
+    border-top: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3px;
+    transition: all 0.5s ease-out;
+}
+.footer__copy:hover{
+    color: white;
+}
+.footer__item{
+    
+    width: 100%;
+    height: 94%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 20px;
+    cursor: pointer;
+}
+.footer__title{
+    font-size: 1.2rem;
+    color: rgb(245, 243, 243);
+    margin-bottom: 1.4rem;
+    font-weight: bolder;
+}
+.footer__ul{
+    list-style: none;
+}
+.social ul li{
+    margin-bottom: 10px;
+}
+.social ul li input{
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    padding: 5px;
+    color: white;
+}
+.subscribe__btn{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 2rem;
+    color: black;
+    text-align: center;
+    font-weight: bolder;
+}
+.socials i{
+    margin-left: 10px;
+}
